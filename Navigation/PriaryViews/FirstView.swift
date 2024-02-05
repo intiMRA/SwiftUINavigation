@@ -25,6 +25,9 @@ struct FirstView: View {
                 Button("Navigate to Forth") {
                     router.navigate(to: SecondaryDestination.forthView(.init(text: "forth view from first view")))
                 }
+                Button("Go to Root") {
+                    router.popToRoot()
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.pink)
