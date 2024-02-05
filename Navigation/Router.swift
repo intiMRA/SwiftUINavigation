@@ -31,4 +31,8 @@ protocol NavigationDestination: Equatable, Hashable { }
     func pop() {
         stack.removeLast()
     }
+    
+    func popToRoot() {
+        stack.removeLast(stack.count - 1)
+    }
 }

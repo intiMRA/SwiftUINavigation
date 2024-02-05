@@ -22,7 +22,7 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.black)
-            .primaryRouterNavigator(router: router)
+            .primaryNavigator(router: router)
         }
     }
 }

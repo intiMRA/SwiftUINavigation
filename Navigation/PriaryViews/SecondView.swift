@@ -29,7 +29,7 @@ struct SecondView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.green)
-            .secondaryRouterNavigator(router: router)
+            .secondaryNavigator(router: router)
     }
 }
 

@@ -28,7 +28,7 @@ struct FirstView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.pink)
-            .secondaryRouterNavigator(router: router)
+            .secondaryNavigator(router: router)
     }
 }
 

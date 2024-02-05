@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension View {
-    func primaryRouterNavigator(router: Router) -> some View {
+    func primaryNavigator(router: Router) -> some View {
         self
             .navigationDestination(for: PrimaryDestination.self) { destination in
                 switch destination {
@@ -23,7 +23,7 @@ extension View {
             }
     }
     
-    func secondaryRouterNavigator(router: Router) -> some View {
+    func secondaryNavigator(router: Router) -> some View {
         self
             .navigationDestination(for: SecondaryDestination.self) { destination in
                 switch destination {
