@@ -17,13 +17,13 @@ struct FirstView: View {
                     .bold()
                 
                 Button("Navigate to SecondView") {
-                    router.navigate(to: PrimaryDestination.secondView(.init(text: "second view from first view")))
+                    router.navigate(to: .secondView(.init(text: "second view from first view")))
                 }
                 Button("Navigate to Third") {
-                    router.navigate(to: SecondaryDestination.thirdView(.init(text: "third view from first view")))
+                    router.navigate(to: .thirdView(.init(text: "third view from first view")))
                 }
                 Button("Navigate to Forth") {
-                    router.navigate(to: SecondaryDestination.forthView(.init(text: "forth view from first view")))
+                    router.navigate(to: .forthView(.init(text: "forth view from first view")))
                 }
                 Button("Go to Root") {
                     router.popToRoot()
@@ -31,7 +31,6 @@ struct FirstView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.pink)
-            .secondaryNavigator(router: router)
     }
 }
 

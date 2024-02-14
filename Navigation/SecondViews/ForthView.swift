@@ -17,7 +17,7 @@ struct ForthView: View {
                 .bold()
             
             Button("Navigate to ThirdView") {
-                router.navigate(to: SecondaryDestination.thirdView(.init(text: "second view from forth view")))
+                router.navigate(to: .thirdView(.init(text: "second view from forth view")))
             }
             Button("Go to Root") {
                 router.popToRoot()

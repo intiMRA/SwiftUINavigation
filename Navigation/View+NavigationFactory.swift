@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 extension View {
-    func primaryNavigator(router: Router) -> some View {
+    func navigator(router: Router) -> some View {
         self
-            .navigationDestination(for: PrimaryDestination.self) { destination in
+            .navigationDestination(for: Destination.self) { destination in
                 switch destination {
                 case .firstView(let viewModel):
                     FirstView(viewModel: viewModel)
@@ -19,14 +19,6 @@ extension View {
                 case .secondView(let viewModel):
                     SecondView(viewModel: viewModel)
                         .environment(router)
-                }
-            }
-    }
-    
-    func secondaryNavigator(router: Router) -> some View {
-        self
-            .navigationDestination(for: SecondaryDestination.self) { destination in
-                switch destination {
                 case .thirdView(let viewModel):
                     ThirdView(viewModel: viewModel)
                         .environment(router)
@@ -36,5 +28,4 @@ extension View {
                 }
             }
     }
-
 }

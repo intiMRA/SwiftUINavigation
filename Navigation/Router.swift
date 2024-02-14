@@ -8,23 +8,20 @@
 import Foundation
 import SwiftUI
 
-enum SecondaryDestination: NavigationDestination {
-    case thirdView(ThirdViewModel)
-    case forthView(ForthViewModel)
-}
-
-enum PrimaryDestination: NavigationDestination {
+enum Destination: Hashable {
     case firstView(FirstViewModel)
     case secondView(SecondViewModel)
+    case thirdView(ThirdViewModel)
+    case forthView(ForthViewModel)
 }
 
 protocol NavigationDestination: Equatable, Hashable { }
 
 @Observable class Router {
    
-    var stack = NavigationPath()
+    var stack = [Destination]()
     
-    func navigate(to destination: any NavigationDestination) {
+    func navigate(to destination: Destination) {
         stack.append(destination)
     }
     
